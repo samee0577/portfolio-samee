@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+
+        <div class="search">
+            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <button><img src="images/search.png"></button>
+        </div>
+        <div class="weather">
+            <p class="status"></p>
+            <img src="images/clouds.png" class="weather-icon">
+            <p>feels like </p>
+            <p class="feel"></p>
+            <h2 class="city"></h2>
+            <h1 class="temp"></h1>
+            
+            
+            <div class="detail">  
+                <div class="humidity">
+                    <img src="images/humidity.png">
+                    <div class="col">
+                    <h3 class="hum">humidity</h3>
+                    <br>
+                    <p class="humper">50%</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <img src="images/wind.png">
+                    <div class="col">
+                        <h3>wind speed</h3>
+                        <br>
+                        <p class="windspeed">2km/h</p>
+                    </div>    
+                </div>
+            </div>
+        </div>  
+    </div>
+    <script src="javas.js"></script>
+    <script>
+        const apiKey="4afc9a006c1cd60a53a559d58388426d"
+        const apiUrl="https://api.openweathermap.org/data/2.5/weather?&units=metric&q="
+        const searchbox=document.querySelector(".search input")
+        const searchbtn=document.querySelector(".search button")
+        const weatherIcon=document.querySelector(".weather-icon")
+
+        searchbtn.addEventListener("click",()=>{
+            getWeather(searchbox.value)
+        })
+        searchbox.addEventListener("keyup",(e)=>{
+            if(e.key=="Enter"){
+                getWeather(searchbox.value);
+            }
+        })
+        async function getWeather(city){
+            const response=await fetch(apiUrl + city + "&appid=" + apiKey)                              
+            const data=await response.json()
+            console.log(data)
+            document.querySelector(".city").innerHTML=data.name
+            document.querySelector(".temp").innerHTML= Math.ceil(data.main.temp) + "°c"
+            document.querySelector(".humper").innerHTML=data.main.humidity + "%"
+            document.querySelector(".windspeed").innerHTML=Math.ceil(data.wind.speed) + " km/h"
+            document.querySelector(".feel").innerHTML=Math.round(data.main.feels_like) + "°c"
+            document.querySelector(".status").innerHTML= data.weather[0].description
+
+            if(data.weather[0].main == "Clouds"){
+                weatherIcon.src="images/clouds.png"
+            }else if(data.weather[0].main == "Clear"){
+                weatherIcon.src="images/clear.png"
+            }else if(data.weather[0].main == "Rain"){
+                weatherIcon.src="images/rain.png"}
+            else if(data.weather[0].main == "Drizzle"){
+                weatherIcon.src="images/drizzle.png"
+            }
+            else if(data.weather[0].main == "Mist"){
+                weatherIcon.src="images/mist.png"
+            }else if(data.weather[0].main == "Snow"){
+                weatherIcon.src="images/snow.png"
+            }
+        }
+
+        getWeather();
+    </script>
+</body>
+</html>

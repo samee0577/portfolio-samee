@@ -1,0 +1,116 @@
+body {
+    opacity: 100%;
+    background-color: cadetblue;          
+    /*color: #fff;*/
+  }
+  
+    #text{ 
+        border-style: outset;
+        border-radius: 8px;
+        border-bottom-color: antiquewhite;
+        border-top-color: #008B8B;
+        border-left-color: #008B8B;
+        text-align: center;
+        font-size: 28px;
+        height: 50%;
+        width: 70%;
+        color: #ed3b3b;
+        background-color: ghostwhite;
+        margin: auto;
+        margin-top : 50px;
+        margin-bottom:20px ;
+    }
+  
+  table{
+    max-width: 300px;
+    text-transform: uppercase;
+    
+    th{
+      font-size: 28px;
+      color: white;
+    }
+    border-style: outset;
+    border: 1px solid white;
+    width: 70%;
+    
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse; 
+  }
+  
+  #name{
+    
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  th{
+    background-color: black;
+  }
+  tr{background-color: lightpink;}
+  
+  tr:hover{
+    border-radius: 20px;
+    background-color: white;
+    border: 5px outset  lightgoldenrodyellow;
+  
+    font-size: 24px;
+    color: darkred;
+  
+    
+   
+    
+  }
+  
+  .drop_menu {
+    min-width: 100px;
+    display:none ;
+    position: absolute;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .drop_menu_button{
+    border-color: white;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px;  
+    border:outset ;
+    background-color: black;
+    color: white;
+  }
+  
+   .drop_menu a{
+    border: solid ;
+    border-color:whitesmoke ;
+    text-align: center;
+    min-height: 10px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: red;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .drop_menu a:hover {
+    background-color: black;
+    border: inset;
+    font-size: 20px;
+    color: cornflowerblue;
+  }
+  
+  .whole-dropdown:hover .drop_menu{
+    display: block;
+  }
+  
+  .drop_menu_button:hover{
+    font-size: 20px;
+  }
+  
+  
+  
+  

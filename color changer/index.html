@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first project</title>
+        <style>
+            html{
+                text-align: center;
+            }
+
+            button{
+                text-transform: uppercase;
+                border-radius: 5px;
+                border: 2px antiquewhite outset;
+                padding: 10px;
+                margin: 10px;
+                width: auto;
+            }
+
+            button:hover{
+                border: 1px paleturquoise inset;
+            }
+
+            .red{
+                color: red;
+            }
+
+            .blue{
+                color: blue;
+            }
+
+            .green{
+                color: green;
+            }
+
+            .ran{
+                color: black;
+            }
+
+            body{
+                background-color: white;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1 margin_left="50px" padding="10px" fontfamily="cursive">COLOR CHANGER</h1>
+        <br>
+        <button class="red" onclick="set('red');">red</button>
+        <button class="blue"  onclick="set('blue');">blue</button>
+        <button class="green"  onclick="set('green');">green</button>
+        <button class="ran"  onclick= "random()">random</button>
+        <br>
+        <button class="lighter"  onclick= "lighter()">lighter</button>
+        <button class="darker"  onclick= "darker()">darker</button>
+        <script src="canvas.js"></script>
+    </body>
+</html>

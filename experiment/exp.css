@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #7e7e7e94;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKcAAABeCAMAAABxVfQPAAAAA1BMVEVvTjcytnZDAAAAJklEQVRoge3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAAAAAAAAAHgMPbAAAXv/Dz8AAAAASUVORK5CYII=);
+}
+.panel{
+   display: flex;
+   background-color: aliceblue;
+   height: auto;
+   width: window-width;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.webname{
+    display: flex;
+    justify-content: center;
+    margin-left: 90px;
+}
+.controls{
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+p{
+    padding: 10px;
+}
+.controls p:hover{
+    color: blue;
+    cursor: pointer;
+
+}
+.buttons{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    bottom: 10%;
+    left: 10%;
+}
+
+.buttons button{
+    color: antiquewhite;
+    font-size: 30px;
+    padding: 10px 30px;
+    margin: 30px;
+    background-color: transparent;
+    border: 3px solid rgb(92, 37, 0);
+    border-radius: 20px;
+}
+
+.buttons button:hover{
+    cursor: pointer;
+    color: antiquewhite;
+    border: 3px solid rgb(92, 37, 0);
+    background-color: rgba(92, 37, 0, 0.7);
+}
+
+.drop{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 200px;
+    height: auto;
+    background-color: aliceblue
+
+}
+
+.drop p{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.drop p:hover{
+    color: blue;
+    cursor: pointer;
+}
